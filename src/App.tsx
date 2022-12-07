@@ -11,6 +11,7 @@ import {ContextProvider} from "./contex/context";
 import BigDates from "./components/Dates";
 import MainCircle from "./components/MainCircle";
 import ControlsButtons from "./components/ContrlosButtons";
+import TitleTrend from "./components/TitleTrend";
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Wrapper>
             <ContextProvider>
                 <MainCircle />
+                <TitleTrend />
                 <BigDates />
                 <ControlsButtons />
                 <Slider />

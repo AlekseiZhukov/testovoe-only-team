@@ -33,11 +33,11 @@ export const Circle = styled.div<Circle>`
   }
     
   #point1 {
-    top: 274px;
+    top: 262px;
     left: -3px;
       &:hover,
       &.show {
-      top: 251px;
+      top: 239px;
       left: -26px;
      }
   }
@@ -61,11 +61,11 @@ export const Circle = styled.div<Circle>`
      }
   }
   #point4 {
-    top: 274px;
+    top: 262px;
     left: 527px;
      &:hover,
       &.show {
-      top: 251px;
+      top: 239px;
       left: 504px;
      }
   }
