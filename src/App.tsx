@@ -26,8 +26,10 @@ const App = () => {
         <Title>Исторические даты</Title>
         <Wrapper>
             <ContextProvider>
+                <React.StrictMode>
                 <MainCircle />
-                <TitleTrend />
+                </React.StrictMode>
+
                 <BigDates />
                 <ControlsButtons />
                 <Slider />

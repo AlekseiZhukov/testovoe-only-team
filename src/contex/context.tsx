@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, {useEffect, useLayoutEffect, useState} from 'react'
 import {DATA, DataItem} from "../data/data"
 
 
@@ -46,8 +46,10 @@ export const ContextProvider =({ children }: Props): JSX.Element => {
         setSlide(value)
     }
     useEffect(() => {
-        setSlideData(DATA.filter(item=> item.id === slide)[0])
-    }, [slide])
+        setSlideData(allData.filter(item=> item.id === slide)[0])
+    }, [slide, allData])
+
+
 
     return  <context.Provider value={{
         allData, slide, slideData, handleClickRight, handleClickLeft, handleClickKeyPoint,

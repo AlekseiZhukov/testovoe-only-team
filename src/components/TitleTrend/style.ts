@@ -5,7 +5,7 @@ import {theme} from "../../styles/theme";
 export const HeaderTrend = styled.h2`
     position: absolute;
     top: 238px;
-    right: 445px;
+    right: -15px;
     width: 100px;
     margin: 0;
     font-weight: 700;

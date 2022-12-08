@@ -20,13 +20,16 @@ export const Wrapper = styled.div`
 `;
 export const VectorVertical = styled.div<IVector>`
   position: absolute;
-  
   left: ${({position}) => position};
   height: 100%;
   width: 1px;
   opacity: .1;
   background: #42567A;
   z-index: -1;
+  @media ${theme.media.small} {
+      display: none;
+      
+  }
 `
 export const VectorHorizontal = styled.div`
   position: absolute;

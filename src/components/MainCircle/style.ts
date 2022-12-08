@@ -4,6 +4,12 @@ interface Circle {
     rotation: number
 }
 
+export const WrapCircle = styled.div`
+  position: relative;
+  width: 530px;
+  margin: 0 auto;
+`
+
 export const Circle = styled.div<Circle>`
   position: relative;
   margin: 0 auto;
