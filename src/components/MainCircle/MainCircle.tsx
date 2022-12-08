@@ -7,17 +7,11 @@ import {DataItem} from "../../data/data";
 
 const MainCircle = () => {
     const {allData, slide, handleClickKeyPoint} = useContext(context)
-    const [allDataLocal, setAllDataLocal] = useState<DataItem[] | null>(null)
-    useLayoutEffect(() => {
-        if (allData) {
-            setAllDataLocal(allData)
-        }
-    },[])
 
     return (
     <WrapCircle>
         <Circle rotation = {slide ? (slide -3)*-1 : 1}>
-            { handleClickKeyPoint && allDataLocal && allDataLocal.map(item =>
+            { handleClickKeyPoint && allData && allData.map(item =>
                 <KeyPoint
                     onClick={() => handleClickKeyPoint(item.id)}
                     rotation={slide ? (slide -3) : 1 } id={`point${item.id}`}
@@ -28,7 +22,6 @@ const MainCircle = () => {
                     </div>
                 </KeyPoint>
             )}
-
         </Circle>
     <TitleTrend />
     </WrapCircle>

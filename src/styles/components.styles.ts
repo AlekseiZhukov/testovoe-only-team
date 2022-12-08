@@ -11,12 +11,16 @@ export const Container = styled.div`
   
   @media ${theme.media.small} {
       width: 320px;
+      height: 568px;
   }
 `;
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  @media ${theme.media.small} {
+       height: calc(100% - 100px);
+  }
 `;
 export const VectorVertical = styled.div<IVector>`
   position: absolute;
@@ -39,6 +43,12 @@ export const VectorHorizontal = styled.div`
   opacity: 0.1;
   background: #42567A;
   z-index: -1;
+  @media ${theme.media.small} {
+  position: relative;
+  top: 293px;
+  background:#C7CDD9;
+  opacity: 1;
+  }
 `
 
 
@@ -63,10 +73,14 @@ export const Title = styled.h1`
           background: linear-gradient(#3877EE 0%, #3877EE 30%, #EF5DA8 70%, #EF5DA8 100%);
         } 
   @media ${theme.media.small} {
+      position: relative;
+      top: 0;
+      left: 0;
       margin-top: 59px;
       margin-left: 0;
       font-size: 20px;
       width: 123px;
+      
       &:before {
         content: none;
       }

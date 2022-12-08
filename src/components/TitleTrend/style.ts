@@ -15,7 +15,10 @@ export const HeaderTrend = styled.h2`
     
     @media ${theme.media.small} {
     width: 273px;
-    margin: 56px auto 57px;
+    margin: 0;
+     top: 148px;
+     left: 0;
+     font-size: 14px;
    }
 `
 

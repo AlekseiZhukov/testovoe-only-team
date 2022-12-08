@@ -5,7 +5,8 @@ export const theme = {
         font: '#42567A'
     },
     media: {
-        small: '(max-width: 540px)'
+        small: '(max-width: 540px)',
+        medium: '(max-width: 940px)'
 
     }
 }

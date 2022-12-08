@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import GlobalStyle from './styles/global.styles'
 import {
     Container,
@@ -11,11 +11,34 @@ import {ContextProvider} from "./contex/context";
 import BigDates from "./components/Dates";
 import MainCircle from "./components/MainCircle";
 import ControlsButtons from "./components/ContrlosButtons";
+import SliderMobile from "./components/SliderMobile";
 import TitleTrend from "./components/TitleTrend";
+import PaginationMobile from "./components/PaginationMobile";
+
 
 
 const App = () => {
-    console.log("render APP")
+    console.log("render APP", window.innerWidth)
+    const width = window.innerWidth
+    const [mobile, setMobile] = useState<boolean>(false);
+    const resizeScreen = () => {
+        if (window.innerWidth <= 540) {
+            setMobile(true);
+        } else {
+            setMobile(false);
+        }
+    }
+    useLayoutEffect(() => {
+       if (width <= 540) {
+            setMobile(true);
+        }
+    }, []);
+    useEffect(() => {
+        window.addEventListener("resize", resizeScreen);
+        return () => {
+            window.removeEventListener("resize", resizeScreen);
+        };
+    }, []);
 
   return (
     <Container>
@@ -26,13 +49,12 @@ const App = () => {
         <Title>Исторические даты</Title>
         <Wrapper>
             <ContextProvider>
-                <React.StrictMode>
-                <MainCircle />
-                </React.StrictMode>
-
+                {!mobile ? <MainCircle /> : <PaginationMobile />}
                 <BigDates />
+                {mobile && <TitleTrend /> }
                 <ControlsButtons />
-                <Slider />
+                {mobile ?  <SliderMobile /> : <Slider />}
+
             </ContextProvider>
         </Wrapper>
         <GlobalStyle />

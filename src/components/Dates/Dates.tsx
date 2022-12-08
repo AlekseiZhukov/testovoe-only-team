@@ -11,7 +11,7 @@ const BigDates:React.FC = () => {
             setTimeout(() => setYear([slideData?.years[0], slideData.years[1]]),500)
 
         }
-    })
+    }, [slideData])
     return (
         <WrapperDates >
             <Dates color="iris" >
