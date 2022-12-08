@@ -11,15 +11,17 @@ export const WrapperDates = styled.div`
     justify-content:space-between ;
     text-align: center;
     z-index: -1;
-    @media ${theme.media.medium} {
-    top: -94px;
-    width: 70%;
-   }
-    @media ${theme.media.small} {
-    top:0;
-    width: 273px;
-    margin: 56px auto 57px;
-   }
+    
+        @media ${theme.media.medium} {
+        top: -94px;
+        width: 70%;
+       }
+       
+        @media ${theme.media.small} {
+        top:0;
+        width: 273px;
+        margin: 56px auto 57px;
+       }
 `
 export const Dates = styled.span<IDates>`
   font-family: PTSans-Bold, sans-serif;
@@ -29,12 +31,14 @@ export const Dates = styled.span<IDates>`
   text-align: center;
   letter-spacing: -0.02em;
   color: ${({color}) => theme.colors[color]};
-   @media ${theme.media.medium} {
-    font-size: 14vw;
-    line-height: 72px;
-   }
-   @media ${theme.media.small} {
-    font-size: 56px;
-    line-height: 72px;
-   }
+  
+       @media ${theme.media.medium} {
+        font-size: 14vw;
+        line-height: 72px;
+       }
+       
+       @media ${theme.media.small} {
+        font-size: 56px;
+        line-height: 72px;
+       }
 `;

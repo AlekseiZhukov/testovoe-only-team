@@ -11,15 +11,15 @@ export const WrapPaginationPoint = styled.div`
     margin: 0 auto;
        
     div {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #42567A;
-    opacity: .4;
-    user-select: none;
-     &.active {
-      opacity: 1;
-    }
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #42567A;
+        opacity: .4;
+        user-select: none;
+             &.active {
+              opacity: 1;
+            }
     }
     
    

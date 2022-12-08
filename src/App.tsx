@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import GlobalStyle from './styles/global.styles'
 import {
     Container,
@@ -16,11 +16,11 @@ import TitleTrend from "./components/TitleTrend";
 import PaginationMobile from "./components/PaginationMobile";
 
 
-
 const App = () => {
-    console.log("render APP", window.innerWidth)
+
     const width = window.innerWidth
     const [mobile, setMobile] = useState<boolean>(false);
+
     const resizeScreen = () => {
         if (window.innerWidth <= 540) {
             setMobile(true);
@@ -28,11 +28,13 @@ const App = () => {
             setMobile(false);
         }
     }
+
     useLayoutEffect(() => {
-       if (width <= 540) {
+        if (width <= 540) {
             setMobile(true);
         }
     }, []);
+
     useEffect(() => {
         window.addEventListener("resize", resizeScreen);
         return () => {
@@ -40,26 +42,25 @@ const App = () => {
         };
     }, []);
 
-  return (
-    <Container>
-        <VectorVertical/>
-        <VectorVertical position="50%"/>
-        <VectorVertical position="100%"/>
-        <VectorHorizontal />
-        <Title>Исторические даты</Title>
-        <Wrapper>
-            <ContextProvider>
-                {!mobile ? <MainCircle /> : <PaginationMobile />}
-                <BigDates />
-                {mobile && <TitleTrend /> }
-                <ControlsButtons />
-                {mobile ?  <SliderMobile /> : <Slider />}
-
-            </ContextProvider>
-        </Wrapper>
-        <GlobalStyle />
-    </Container>
-  );
+    return (
+        <Container>
+            <VectorVertical/>
+            <VectorVertical position="50%"/>
+            <VectorVertical position="100%"/>
+            <VectorHorizontal/>
+            <Title>Исторические даты</Title>
+            <Wrapper>
+                <ContextProvider>
+                    {!mobile ? <MainCircle/> : <PaginationMobile/>}
+                    <BigDates/>
+                    {mobile && <TitleTrend/>}
+                    <ControlsButtons/>
+                    {mobile ? <SliderMobile/> : <Slider/>}
+                </ContextProvider>
+            </Wrapper>
+            <GlobalStyle/>
+        </Container>
+    );
 };
 
 export default App;

@@ -1,23 +1,22 @@
 import React, {useContext, useEffect, useRef} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import './custom-swiper-rmobile.css'
-import { Navigation } from "swiper";
+import {Swiper, SwiperSlide} from 'swiper/react';
 import {Description, DescriptionTitle, SliderWrapperMobile} from "./style";
 import {context} from "../../contex/context";
 import {gsap} from 'gsap'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import './custom-swiper-rmobile.css'
+
 const SliderMobile: React.FC = () => {
     const {slideData} = useContext(context)
     const sliderRef = useRef(null)
 
     useEffect(() => {
-
         gsap.fromTo(sliderRef.current, {
-            opacity:0,
-        }, { duration:1,opacity:1,})
-
+            opacity: 0,
+        }, {duration: 1, opacity: 1,})
     }, [slideData])
+
     return (
         <SliderWrapperMobile ref={sliderRef}>
             <Swiper
@@ -25,7 +24,7 @@ const SliderMobile: React.FC = () => {
                 spaceBetween={25}
                 grabCursor={true}
             >
-                {slideData && slideData.developments.map((item , index) => <SwiperSlide  key={index}>
+                {slideData && slideData.developments.map((item, index) => <SwiperSlide key={index}>
                     <div>
                         <DescriptionTitle>{item.year}</DescriptionTitle>
                         <Description>{item.description}</Description>

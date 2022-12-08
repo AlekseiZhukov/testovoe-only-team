@@ -8,10 +8,9 @@ const PaginationMobile = () => {
     return (
         <WrapPaginationPoint>
             {allData && handleClickKeyPoint && allData.map(item => (
-                <div  key={item.id}
-
-                      onClick={() => handleClickKeyPoint(item.id)}
-                      className={cn({["active"]:item.id === slide})}
+                <div key={item.id}
+                     onClick={() => handleClickKeyPoint(item.id)}
+                     className={cn({["active"]: item.id === slide})}
                 />
             ))}
         </WrapPaginationPoint>

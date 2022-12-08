@@ -30,10 +30,10 @@ export const VectorVertical = styled.div<IVector>`
   opacity: .1;
   background: #42567A;
   z-index: -1;
-  @media ${theme.media.small} {
-      display: none;
-      
-  }
+  
+      @media ${theme.media.small} {
+          display: none;
+      }
 `
 export const VectorHorizontal = styled.div`
   position: absolute;
@@ -43,12 +43,13 @@ export const VectorHorizontal = styled.div`
   opacity: 0.1;
   background: #42567A;
   z-index: -1;
-  @media ${theme.media.small} {
-  position: relative;
-  top: 293px;
-  background:#C7CDD9;
-  opacity: 1;
-  }
+  
+      @media ${theme.media.small} {
+          position: relative;
+          top: 293px;
+          background:#C7CDD9;
+          opacity: 1;
+      }
 `
 
 
@@ -63,27 +64,28 @@ export const Title = styled.h1`
     font-size: 56px;
     line-height: 120%;
     color:  ${theme.colors.font };
+    
         &:before {
-          position: absolute;
-          top: 9px;
-          left: -78px;
-          content: "";
-          width: 5px;
-          height: 120px;
-          background: linear-gradient(#3877EE 0%, #3877EE 30%, #EF5DA8 70%, #EF5DA8 100%);
+              position: absolute;
+              top: 9px;
+              left: -78px;
+              content: "";
+              width: 5px;
+              height: 120px;
+              background: linear-gradient(#3877EE 0%, #3877EE 30%, #EF5DA8 70%, #EF5DA8 100%);
         } 
-  @media ${theme.media.small} {
-      position: relative;
-      top: 0;
-      left: 0;
-      margin-top: 59px;
-      margin-left: 0;
-      font-size: 20px;
-      width: 123px;
-      
-      &:before {
-        content: none;
-      }
+          @media ${theme.media.small} {
+              position: relative;
+              top: 0;
+              left: 0;
+              margin-top: 59px;
+              margin-left: 0;
+              font-size: 20px;
+              width: 123px;
+              
+                  &:before {
+                    content: none;
+                  }
   }
 `;
 

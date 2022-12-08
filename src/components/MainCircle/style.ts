@@ -32,68 +32,75 @@ export const Circle = styled.div<Circle>`
     align-items: center;
     justify-content: center;
     transition: all linear .3s, transform 1ms;
-    &:hover,
-    &.show {
-       transition: all linear .3s, transform 1ms;
-    }
+    
+        &:hover,
+        &.show {
+           transition: all linear .3s, transform 1ms;
+        }
   }
     
   #point1 {
     top: 262px;
     left: -3px;
-      &:hover,
-      &.show {
-      top: 239px;
-      left: -26px;
-     }
+    
+        &:hover,
+        &.show {
+           top: 239px;
+           left: -26px;
+        }
   }
-   #point2 {
+  
+  #point2 {
     top: 32px;
     left: 129px;
-    &:hover,
-    &.show {
-      top: 9px;
-      left: 106px;
-     
-     }
+    
+       &:hover,
+       &.show {
+          top: 9px;
+          left: 106px;
+       }
   }
-   #point3 {
+  
+  #point3 {
     top: 32px;
     left: 391px;
-     &:hover,
-      &.show {
-      top: 9px;
-      left: 368px;
-     }
+    
+        &:hover,
+        &.show {
+          top: 9px;
+          left: 368px;
+        }
   }
+  
   #point4 {
     top: 262px;
     left: 527px;
-     &:hover,
-      &.show {
-      top: 239px;
-      left: 504px;
-     }
+    
+        &:hover,
+        &.show {
+          top: 239px;
+          left: 504px;
+        }
   }
   #point5 {
     top: 489px;
     left: 391px;
-    &:hover,
-      &.show {
-      top: 466px;
-      left: 368px;
-      
-     }
+    
+        &:hover,
+        &.show {
+          top: 466px;
+          left: 368px;
+        }
   }
    #point6 {
     top: 489px;
     left: 129px;
-    &:hover,
-      &.show {
-      top: 466px;
-      left: 106px;
-      
-     }
+    
+        &:hover,
+        &.show {
+          top: 466px;
+          left: 106px;
+        }
   }
 `;
 export const KeyPoint = styled.div<Circle>`
@@ -107,6 +114,7 @@ export const KeyPoint = styled.div<Circle>`
   cursor: pointer;
   transform: rotate(${({rotation}) => rotation * 60}deg);
   font-size: 20px;
+  
   &:hover,
   &.show {
       display: flex;
@@ -117,7 +125,5 @@ export const KeyPoint = styled.div<Circle>`
       height: 56px;
       background: #F4F5F9;
       border: 1px solid rgba(48, 62, 88, 0.5);
-      
   }
-  
 `
